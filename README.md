@@ -3,8 +3,9 @@ In this project, I explore trends in economics through text mining three open ac
 
 Programs:
 
-- Python
-- R
+Python (3.8)
+
+R (4.0.2)
 
 # Introduction
 This project was inspired by [Currie, Kleven, and Zwiers](http://www.nber.org/papers/w26715), NBER Working Paper No. 26715, "Technology and Big Data are Changing Economics: Mining Text to Track Methods." In that paper, Currie, Kleven, and Zwiers analyze a large selection of applied microeconomic papers published as working papers with NBER or in one of the top five journals (American Economic Review, Econometrica, the Journal of Political Economy, the Quarterly Journal of Economic, and the Review of Economic Studies). I use similar methods to extend their analysis with three open economics journals whose archives range back to 1992.
@@ -34,7 +35,7 @@ The data was gathered and converted to a CSV with Python. Depending on the journ
 Once the regular expression results are generated, they are converted to a CSV containing one entry for each article.
 
 ### Data Dictionary
-| variable     | meaning  |
+| Variable     | Meaning  |
 |-------------|-----------|
 | journal   | Academic Journal  |
 | title       | Article title  |
@@ -47,6 +48,6 @@ Once the regular expression results are generated, they are converted to a CSV c
 ### Regular Expressions
 | Variable     | Regular expression  |
 |-------------|-----------|
-|  |   |
+| To be completed... |   |
 
 # Preliminary Results
