@@ -97,11 +97,22 @@ p_is_empty <- article_meta %>%
 
 
 
+p_filenames <- c("all_articles.png",
+                 "journal_articles.png",
+                 "is_abstract.png",
+                 "is_empty.png")
 
-doaj_plot(p_all_articles) # NOTE: doaj_plot() is sourced from doaj_theme.R
-doaj_plot(p_journal_articles)
-doaj_plot(p_is_abstract)
-doaj_plot(p_is_empty)
+# NOTE: doaj_plot() is sourced from doaj_theme.R
+doaj_plot(p_all_articles) + 
+  ggsave("img/all_articles.png", device = "png", scale = 2)
+doaj_plot(p_journal_articles) + 
+  ggsave("img/journal_articles.png", device = "png", scale = 2)
+doaj_plot(p_is_abstract) + 
+  ggsave("img/is_abstract.png", device = "png", scale = 2)
+doaj_plot(p_is_empty) + 
+  ggsave("img/is_empty.png", device = "png", scale = 2)
+
+
 
 
 # Share of articles that are abstracts only

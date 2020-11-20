@@ -50,4 +50,22 @@ Once the regular expression results are generated, they are converted to a CSV c
 |-------------|-----------|
 | To be completed... |   |
 
-# Preliminary Results
+## Data Quality
+The data is of course not perfect. Some files could not be found with regular URL searches; some files were downloaded but did not convert to text. Each file was checked for length, the shortest often being corrupt (0-10 characters). In general, most files that contained any characters were the result of a successful conversion.
+
+When a file was not found or converted properly, its full-text attribute was filled instead with the abstract found in the DOAJ database. This lets one search at least _part_ of the content for keywords. There is a flag `is_abstract` so you can filter these out for most analyses. When the abstract could not be found, a blank string was used.
+
+![all articles](.\img\all_articles.png)
+
+![Journal articles](.\img\journal_articles.png)
+
+![is empty](.\img\is_empty.png)
+
+![is abstract](.\img\is_abstract.png)
+
+**Notable Features**
+1. The number of articles per year is not always consistent over time.
+2. The years 2008 and 2009 are nearly completely missing for the JARE.
+3. The year 2014 is completely missing, and the year 2020 is almost completely missing, for Cogent Economics and Finance.
+4. Essays in Economic and Business History has a nearly complete record, but as you'll see later, this journal also has some strange features.
+5. Nearly every missing article was successfully replaced with an abstract, barring some in 2018 through 2020.
