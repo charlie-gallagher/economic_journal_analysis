@@ -55,13 +55,13 @@ The data is of course not perfect. Some files could not be found with regular UR
 
 When a file was not found or converted properly, its full-text attribute was filled instead with the abstract found in the DOAJ database. This lets one search at least _part_ of the content for keywords. There is a flag `is_abstract` so you can filter these out for most analyses. When the abstract could not be found, a blank string was used.
 
-![all articles](.\img\all_articles.png)
+![allarticles](https://github.com/charlie-gallagher/economic_journal_analysis/blob/master/img/all_articles.png)
 
-![Journal articles](.\img\journal_articles.png)
+![Journalarticles](https://github.com/charlie-gallagher/economic_journal_analysis/blob/master/img/journal_articles.png)
 
-![is empty](.\img\is_empty.png)
+![isabstract](https://github.com/charlie-gallagher/economic_journal_analysis/blob/master/img/is_abstract.png)
 
-![is abstract](.\img\is_abstract.png)
+![isempty](https://github.com/charlie-gallagher/economic_journal_analysis/blob/master/img/is_empty.png)
 
 **Notable Features**
 1. The number of articles per year is not always consistent over time.
