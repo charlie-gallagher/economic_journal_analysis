@@ -15,7 +15,12 @@ article_meta <- read_csv('./python/article_metadata.csv',
                          )) %>% 
   mutate(
     is_empty = (nchar == 0),
-    is_abstract = is_abstract == "True"
+    is_abstract = is_abstract == "True",
+    is_abstract = replace(
+      is_abstract, 
+      nchar < 15000 & journal == "Essays in Economic and Business History",
+      TRUE
+    )
   )
 
 
@@ -160,3 +165,9 @@ article_meta %>%
                   minor_breaks = seq(1990, 2020, 1)) + 
   ggthemes::theme_few()
 
+
+# Article length as points
+article_meta %>% 
+  filter(!is_abstract) %>% 
+  ggplot() + 
+  geom_point(aes(x = year, y = nchar, color = journal))
